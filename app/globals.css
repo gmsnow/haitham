@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0f1b2d;
+  --color-secondary: #1e2b3a;
+  --color-accent: #03a9f4;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 960px;
+  --breakpoint-xl: 1200px;
+
+  --background-image-explosion: url("/bg-explosion.png");
+  --background-image-circles: url("/bg-circles.png");
+  --background-image-circle-star: url("/circle-star.svg");
+  --background-image-site: url("/site-bg.svg");
+
+  --animate-spin-slow: spin 6s linear infinite;
+}
+
+@theme inline {
+  --font-sora: var(--font-sora-family), sans-serif;
+  --font-tajawal: var(--font-tajawal-family), sans-serif;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+.translate-z-0 {
+  transform: translateZ(0px);
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  background-color: #03a9f4;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-prev:after {
+  color: #03a9f4;
+}
+
+@layer base {
+  body {
+    @apply bg-secondary overflow-hidden leading-relaxed;
+  }
+  body.lang-ar {
+    font-family: var(--font-tajawal), sans-serif;
+  }
+  .page {
+    @apply w-full h-screen overflow-hidden;
+  }
+
+  @media (max-width: 1199px) {
+    .page {
+      height: auto;
+      min-height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+  .h1 {
+    @apply font-semibold leading-[1.15] mb-8;
+    font-size: clamp(2.125rem, 5vw, 3.8rem);
+  }
+  .h2 {
+    @apply font-semibold leading-[1.2] mb-4;
+    font-size: clamp(1.75rem, 4.25vw, 3.4rem);
+  }
+  p {
+    @apply leading-[1.8] text-white/60 font-light;
+  }
+  .btn,
+  .input {
+    @apply h-13;
+  }
+  .input {
+    @apply w-full h-13 rounded-lg ps-6;
+  }
+  .input,
+  .textarea {
+    @apply bg-transparent outline-hidden focus:ring-1 focus:ring-accent border border-white/20 placeholder:text-white/30 placeholder:font-light;
+  }
+  .textarea {
+    @apply w-full min-h-32 p-6 rounded-lg resize-none overflow-hidden max-h-60;
+  }
+}
+
+/* Hide reCAPTCHA v3 badge */
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+/* RTL adjustments */
+[dir="rtl"] nav .tooltip-caret {
+  right: auto;
+  left: -0.5rem;
+  border-left-color: transparent;
+  border-left-width: 0;
+  border-right-color: white;
+  border-right-width: 8px;
+}
