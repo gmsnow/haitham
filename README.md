@@ -62,6 +62,8 @@ modern-portfolio/
     |-- Bulb.tsx
     |-- Circles.tsx
     |-- Header.tsx
+    |-- LangToggle.tsx
+    |-- LanguageProvider.tsx
     |-- Nav.tsx
     |-- ParticlesContainer.tsx
     |-- ProjectsBtn.tsx
@@ -71,6 +73,9 @@ modern-portfolio/
     |-- TopLeftImg.tsx
     |-- Transition.tsx
     |-- WorkSlider.tsx
+  |- lang/
+    |-- ar.ts
+    |-- en.ts
   |- lib/
     |-- contact.ts
   |- public/
@@ -81,6 +86,7 @@ modern-portfolio/
   |- eslint.config.mjs
   |- netlify.toml
   |- next.config.ts
+  |- package-lock.json
   |- package.json
   |- pnpm-lock.yaml
   |- pnpm-workspace.yaml
