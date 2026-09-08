@@ -54,12 +54,6 @@ const Home = () => {
               {dictionary.home.tagline}
             </motion.p>
 
-            <div className="flex justify-center xl:justify-start">
-              <div className="xl:hidden">
-                <ProjectsBtn />
-              </div>
-            </div>
-
             <motion.div
               variants={fadeIn("down", 0.4)}
               initial="hidden"
@@ -77,9 +71,13 @@ const Home = () => {
             animate="show"
             exit="hidden"
             transition={{ duration: 1, ease: "easeInOut" }}
-            className="relative flex-shrink-0 w-64 sm:w-84 lg:w-100 xl:w-[clamp(320px,32vw,560px)] max-w-full mx-auto xl:mx-0 pb-28 sm:pb-20 xl:pb-0"
+            className="relative flex-shrink-0 w-64 sm:w-84 lg:w-100 xl:w-[clamp(320px,32vw,560px)] max-w-full mx-auto xl:mx-0 pb-10 sm:pb-8 xl:pb-0"
 >
             <Avatar />
+
+            <div className="xl:hidden flex justify-center mt-8">
+              <ProjectsBtn />
+            </div>
           </motion.div>
         </div>
       </div>
