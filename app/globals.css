@@ -46,7 +46,8 @@
 
 @layer base {
   body {
-    @apply bg-secondary overflow-hidden leading-relaxed;
+    @apply bg-secondary leading-relaxed;
+    background: var(--color-secondary) url("/site-bg.svg") center/cover no-repeat fixed;
   }
   body.lang-ar {
     font-family: var(--font-tajawal), sans-serif;
