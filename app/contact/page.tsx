@@ -8,6 +8,7 @@ import {
 } from "react-google-recaptcha-v3";
 import toast from "react-hot-toast";
 import { BsArrowRight } from "react-icons/bs";
+import { LuMail, LuMapPin, LuPhone } from "react-icons/lu";
 
 import {
   CONTACT_RECAPTCHA_ACTION,
@@ -309,6 +310,29 @@ const Contact = () => {
               {dictionary.contact.headingAccent}
             </span>
           </motion.h2>
+
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-10">
+            <a
+              href={`mailto:${dictionary.personal.email}`}
+              className="flex items-center gap-x-2 text-white/70 hover:text-accent transition-colors duration-300 group"
+            >
+              <LuMail className="text-accent text-xl" aria-hidden />
+              <span className="font-light">{dictionary.personal.email}</span>
+            </a>
+
+            <a
+              href={`tel:${dictionary.personal.phone}`}
+              className="flex items-center gap-x-2 text-white/70 hover:text-accent transition-colors duration-300 group"
+            >
+              <LuPhone className="text-accent text-xl" aria-hidden />
+              <span className="font-light">{dictionary.personal.phone}</span>
+            </a>
+
+            <div className="flex items-center gap-x-2 text-white/70">
+              <LuMapPin className="text-accent text-xl" aria-hidden />
+              <span className="font-light">{dictionary.personal.location}</span>
+            </div>
+          </div>
 
           {siteKey ? (
             <GoogleReCaptchaProvider reCaptchaKey={siteKey}>

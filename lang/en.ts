@@ -11,65 +11,131 @@ const en = {
     toArabic: "عربي",
     toEnglish: "EN",
   },
+  personal: {
+    name: "Hitham Esam Homaid",
+    title: "Support Specialist And Software Engineer",
+    email: "hithamhomid5@gmail.com",
+    phone: "+967777296855",
+    location: "Sanaa, Yemen",
+  },
   home: {
     title1: "Transforming Ideas",
     title2: "Into",
     titleAccent: "Digital Reality",
     tagline:
-      "Hi, I'm Haitham — a full-stack developer and ERP specialist from Sana'a, Yemen. I craft responsive websites, custom web applications, and robust ERP systems for businesses of every size.",
+      "Hi, I'm Hitham — a support specialist and software engineer from Sana'a, Yemen. I build responsive websites, troubleshoot complex problems, and craft reliable digital solutions.",
   },
   about: {
     headingPre: "Crafting",
     headingAccent: "digital",
     headingPost: "experiences that drive real results.",
     tagline:
-      "Hello! I'm a passionate and versatile IT professional from Sana'a, Yemen, with a strong foundation in software engineering, data analytics, and user-centric design. I specialize in full-stack development and ERP systems, building intuitive digital experiences and robust, scalable solutions.",
+      "My skills improve every day. I'm a fast learner and good at applying knowledge in the field. I have a strong understanding of HTML, CSS, and JavaScript, and I'm good at troubleshooting, solving problems, and building successful solutions. I have expertise in Microsoft Office software and hands-on experience with SQL databases, as well as other database types such as MongoDB and PostgreSQL. I can work both independently and as part of a team, and I learn and adapt quickly, which keeps me up to date with the latest technology.",
     stats: {
       experience: "Years of experience.",
-      clients: "Satisfied clients.",
-      projects: "Finished projects.",
-      support: "Hours of support.",
+      technologies: "Technologies.",
+      certifications: "Certifications.",
+      languages: "Languages.",
     },
     tabs: {
       skills: {
         label: "Skills",
-        info: ["Full-Stack Development", "ERP Development", "UI/UX Design"],
+        info: [
+          "Front-End Development",
+          "Programming",
+          "Backend",
+          "Databases",
+          "Operating Systems",
+          "Other Tools",
+        ],
       },
       certifications: {
         label: "Certifications",
         info: [
-          {
-            title: "Google IT Support Professional – Coursera",
-            stage: "2022 - 2024",
-          },
-          {
-            title: "CS50: Intro to Computer Science – Harvard University",
-            stage: "2024 - 2025",
-          },
+          { title: "Technical Support Fundamentals" },
+          { title: "The Bits and Bytes of Computer Networking" },
+          { title: "React.js" },
+          { title: "Node.JS" },
+          { title: "Bootstrap" },
+          { title: "SASS Language" },
+          { title: "JavaScript" },
+          { title: "CSS" },
+          { title: "HTML" },
         ],
       },
       experience: {
         label: "Experience",
         info: [
           {
-            title: "IT Support Specialist & IT Admin – SAMA Center",
-            stage: "2024 - Present",
+            title: "Customer Care – Sabafon, Sanaa, Yemen",
+            stage: "Oct 2024 – Present",
           },
           {
-            title: "Senior Front-End Developer – Tahamah Co.",
-            stage: "2019 - 2020",
+            title:
+              "IT Support Specialist – SAMA-CENTER For Physiotherapy And Rehabilitation, Sanaa, Yemen",
+            stage: "Jan 2024 – Present",
+          },
+          {
+            title:
+              "Software Engineer And Translator – Freelancer, Sana'a",
+            stage: "May 2021 – Present",
+          },
+          {
+            title:
+              "Assistant Of Teacher – Modern Specialized University, Sanaa",
+            stage: "Jan 2024 – Mar 2024",
+          },
+          {
+            title: "Front-End Developer – Tahamah Company, Sana'a",
+            stage: "2019 – 2020",
           },
         ],
       },
       education: {
         label: "Education",
         info: [
+          { title: "CCNA – Online Courses", stage: "Feb 2025 – Jun 2025" },
           {
             title:
-              "Bachelor of Arts, English Literature – National University, Sanaa",
-            stage: "2019 - 2024",
+              "Bachelor Of Science, Computer Science – National University, Sanaa",
+            stage: "Jun 2025 – Present",
+          },
+          {
+            title:
+              "Bachelor Of Science, IT Support Specialist – Google_Coursera Online Course, California",
+            stage: "Dec 2022 – Present",
+          },
+          {
+            title:
+              "Some College (No Degree), Computer Science – Harvard University Online Course, Massachusetts, United States",
+            stage: "Oct 2022 – Jan 2024",
+          },
+          {
+            title:
+              "Bachelor Of Arts, English Literature – National University, Sana'a",
+            stage: "Jul 2019 – May 2024",
           },
         ],
+      },
+      languages: {
+        label: "Languages",
+        info: ["English", "Arabic"],
+      },
+      interests: {
+        label: "Interests",
+        info: [
+          "Technology",
+          "Programming",
+          "Design",
+          "Problem-solving",
+          "Learning",
+          "Sports And Fitness",
+          "Reading",
+        ],
+      },
+      references: {
+        label: "References",
+        info: [{ title: "Available on Request" }],
       },
     },
   },
@@ -123,7 +189,7 @@ const en = {
         name: "Anne Smith",
         position: "Customer",
         message:
-          "Haitham is a truly versatile professional. He delivered our project on time and the quality exceeded our expectations.",
+          "Hitham is a truly versatile professional. He delivered our project on time and the quality exceeded our expectations.",
       },
       {
         name: "Jane Doe",

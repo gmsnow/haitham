@@ -5,22 +5,44 @@ import { useState } from "react";
 import CountUp from "react-countup";
 import {
   FaCss3,
-  FaFigma,
-  FaHtml5,
-  FaJs,
-  FaNodeJs,
-  FaReact,
+  FaDatabase,
+  FaJava,
+  FaMicrosoft,
+  FaWindows,
 } from "react-icons/fa";
 import type { IconType } from "react-icons";
 import {
+  SiAngular,
+  SiBootstrap,
+  SiCplusplus,
+  SiHtml5,
+  SiJavascript,
   SiLinux,
   SiMongodb,
+  SiMysql,
   SiNodedotjs,
-  SiOdoo,
   SiPostgresql,
   SiPython,
+  SiReact,
+  SiSass,
 } from "react-icons/si";
-import { TbBrandAdobePhotoshop, TbBrandAdobeXd } from "react-icons/tb";
+import { DiMsqlServer } from "react-icons/di";
+import {
+  LuBookOpen,
+  LuCode,
+  LuCpu,
+  LuDumbbell,
+  LuGraduationCap,
+  LuHeadset,
+  LuLanguages,
+  LuMonitorCog,
+  LuNetwork,
+  LuPalette,
+  LuPuzzle,
+  LuRouter,
+  LuUsers,
+} from "react-icons/lu";
+import { TbBrandAdobe, TbCertificate, TbHeadset } from "react-icons/tb";
 
 import Circles from "@/components/Circles";
 import { useLanguage } from "@/components/LanguageProvider";
@@ -42,61 +64,95 @@ const aboutData: AboutDataItem[] = [
     id: "skills",
     info: [
       {
-        id: "fullstack",
+        id: "frontend",
         icons: [
-          FaHtml5,
+          SiHtml5,
           FaCss3,
-          FaJs,
-          FaReact,
-          FaNodeJs,
-          SiNodedotjs,
-          SiPostgresql,
+          SiJavascript,
+          SiReact,
+          SiAngular,
+          SiBootstrap,
+          SiSass,
         ],
       },
       {
-        id: "erp",
-        icons: [SiOdoo, SiPython, SiMongodb, SiLinux],
+        id: "programming",
+        icons: [SiPython, FaJava, SiCplusplus],
       },
       {
-        id: "uiux",
-        icons: [FaFigma, TbBrandAdobeXd, TbBrandAdobePhotoshop],
+        id: "backend",
+        icons: [SiNodedotjs],
+      },
+      {
+        id: "databases",
+        icons: [FaDatabase, SiMysql, SiPostgresql, DiMsqlServer, SiMongodb],
+      },
+      {
+        id: "os",
+        icons: [SiLinux, FaWindows],
+      },
+      {
+        id: "other",
+        icons: [TbCertificate, TbBrandAdobe, FaMicrosoft],
       },
     ],
   },
   {
     id: "certifications",
     info: [
-      {
-        id: "google",
-        stage: "2022 - 2024",
-      },
-      {
-        id: "cs50",
-        stage: "2024 - 2025",
-      },
+      { id: "tech-support-fundamentals", icons: [TbHeadset] },
+      { id: "networking", icons: [LuNetwork] },
+      { id: "react", icons: [SiReact] },
+      { id: "node", icons: [SiNodedotjs] },
+      { id: "bootstrap", icons: [SiBootstrap] },
+      { id: "sass", icons: [SiSass] },
+      { id: "javascript", icons: [SiJavascript] },
+      { id: "css", icons: [FaCss3] },
+      { id: "html", icons: [SiHtml5] },
     ],
   },
   {
     id: "experience",
     info: [
-      {
-        id: "sama",
-        stage: "2024 - Present",
-      },
-      {
-        id: "tahamah",
-        stage: "2019 - 2020",
-      },
+      { id: "sabafon", icons: [LuHeadset] },
+      { id: "sama", icons: [LuMonitorCog] },
+      { id: "freelancer", icons: [LuCode, LuLanguages] },
+      { id: "assistant", icons: [LuGraduationCap] },
+      { id: "tahamah", icons: [LuCode] },
     ],
   },
   {
     id: "education",
     info: [
-      {
-        id: "ba",
-        stage: "2019 - 2024",
-      },
+      { id: "ccna", icons: [LuRouter] },
+      { id: "cs-national", icons: [LuGraduationCap] },
+      { id: "it-support", icons: [LuMonitorCog] },
+      { id: "harvard", icons: [LuGraduationCap] },
+      { id: "english", icons: [LuBookOpen] },
     ],
+  },
+  {
+    id: "languages",
+    info: [
+      { id: "english", icons: [LuLanguages] },
+      { id: "arabic", icons: [LuLanguages] },
+    ],
+  },
+  {
+    id: "interests",
+    info: [
+      { id: "technology", icons: [LuCpu] },
+      { id: "programming", icons: [LuCode] },
+      { id: "design", icons: [LuPalette] },
+      { id: "problem-solving", icons: [LuPuzzle] },
+      { id: "learning", icons: [LuGraduationCap] },
+      { id: "sports", icons: [LuDumbbell] },
+      { id: "reading", icons: [LuBookOpen] },
+    ],
+  },
+  {
+    id: "references",
+    info: [{ id: "available", icons: [LuUsers] }],
   },
 ];
 
@@ -150,28 +206,28 @@ const About = () => {
 
               <div className="relative flex-1 after:w-px after:h-full after:bg-white/10 after:absolute after:top-0 after:end-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={232} duration={5} />
+                  <CountUp start={0} end={21} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-25">
-                  {dictionary.about.stats.clients}
+                  {dictionary.about.stats.technologies}
                 </div>
               </div>
 
               <div className="relative flex-1 after:w-px after:h-full after:bg-white/10 after:absolute after:top-0 after:end-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={21} duration={5} />
+                  <CountUp start={0} end={9} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-25">
-                  {dictionary.about.stats.projects}
+                  {dictionary.about.stats.certifications}
                 </div>
               </div>
 
               <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={1453} duration={5} />
+                  <CountUp start={0} end={2} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-25">
-                  {dictionary.about.stats.support}
+                  {dictionary.about.stats.languages}
                 </div>
               </div>
             </div>
@@ -183,7 +239,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] xl:h-120"
+          className="flex flex-col w-full xl:max-w-[48%] xl:h-120 xl:min-h-0"
         >
           <div className="flex flex-wrap justify-center xl:justify-start gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemI) => {
@@ -205,34 +261,40 @@ const About = () => {
             })}
           </div>
 
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start overflow-y-auto">
             {aboutData[index].info.map((item, itemI) => {
               const tab = dictionary.about.tabs[
                 aboutData[index].id as keyof typeof dictionary.about.tabs
               ];
               const entry = tab.info[itemI];
               const infoTitle = typeof entry === "string" ? entry : entry.title;
-              const infoStage = typeof entry === "string" ? item.stage : entry.stage;
+              const infoStage =
+                typeof entry === "string"
+                  ? item.stage
+                  : "stage" in entry
+                    ? entry.stage
+                    : undefined;
               return (
                 <div
                   key={itemI}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-center text-white/60"
+                  className="flex-1 flex flex-col w-full max-w-full items-center text-center xl:items-start xl:text-start text-white/60"
                 >
-                  <div className="font-light mb-2 md:mb-0">{infoTitle}</div>
+                  <div className="font-light leading-snug">{infoTitle}</div>
                   {infoStage && (
-                    <>
-                      <div className="hidden md:flex">-</div>
-                      <div>{infoStage}</div>
-                    </>
+                    <div className="text-sm text-white/40 mt-0.5">
+                      {infoStage}
+                    </div>
                   )}
 
-                  <div className="flex gap-x-4">
-                    {item.icons?.map((Icon, iconI) => (
-                      <div key={iconI} className="text-2xl text-white">
-                        <Icon />
-                      </div>
-                    ))}
-                  </div>
+                  {item.icons && item.icons.length > 0 && (
+                    <div className="flex flex-wrap justify-center xl:justify-start gap-x-4 mt-1.5">
+                      {item.icons.map((Icon, iconI) => (
+                        <div key={iconI} className="text-2xl text-white">
+                          <Icon aria-hidden />
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               );
             })}
