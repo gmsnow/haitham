@@ -24,46 +24,17 @@ const WorkSlider = () => {
           {
             title: titles[0],
             path: "/thumb1.jpg",
-            link: "http://example.com",
+            link: "https://samacenter.vercel.app/ar",
           },
           {
             title: titles[1],
             path: "/thumb2.jpg",
-            link: "http://example.com",
+            link: "https://sama-center-sys.vercel.app/dashboard",
           },
           {
             title: titles[2],
             path: "/thumb3.jpg",
-            link: "http://example.com",
-          },
-          {
-            title: titles[3],
-            path: "/thumb4.jpg",
-            link: "http://example.com",
-          },
-        ],
-      },
-      {
-        images: [
-          {
-            title: titles[3],
-            path: "/thumb4.jpg",
-            link: "http://example.com",
-          },
-          {
-            title: titles[0],
-            path: "/thumb1.jpg",
-            link: "http://example.com",
-          },
-          {
-            title: titles[1],
-            path: "/thumb2.jpg",
-            link: "http://example.com",
-          },
-          {
-            title: titles[2],
-            path: "/thumb3.jpg",
-            link: "http://example.com",
+            link: "https://muafa-store.vercel.app/",
           },
         ],
       },

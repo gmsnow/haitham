@@ -179,7 +179,7 @@ const en = {
       "Selected projects that show how I solve problems and craft useful, reliable tools.",
     live: "LIVE",
     project: "PROJECT",
-    titles: ["Title", "Title", "Title", "Title"],
+    titles: ["SAMA Center Website", "SAMA Center System", "Muafa Store"],
   },
   testimonials: {
     headingPre: "What clients",
